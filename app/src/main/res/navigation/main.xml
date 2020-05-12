@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proyectozesari.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/sitiosFragment"
+        android:name="com.example.proyectozesari.SitiosFragment"
+        android:label="fragment_sitios"
+        tools:layout="@layout/fragment_sitios" />
+    <fragment
+        android:id="@+id/historiasFragment"
+        android:name="com.example.proyectozesari.HistoriasFragment"
+        android:label="fragment_historias"
+        tools:layout="@layout/fragment_historias" />
+</navigation>
