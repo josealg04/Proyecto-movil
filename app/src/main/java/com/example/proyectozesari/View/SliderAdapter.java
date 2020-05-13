@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.View;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.proyectozesari.R;
 
 public class SliderAdapter extends PagerAdapter {
 

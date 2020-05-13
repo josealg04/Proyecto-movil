@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.View;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.proyectozesari.Model.Historias;
+import com.example.proyectozesari.R;
 
 import java.util.ArrayList;
 

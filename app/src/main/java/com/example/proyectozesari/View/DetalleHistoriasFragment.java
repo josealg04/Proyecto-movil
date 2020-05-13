@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.View;
 
 import android.os.Bundle;
 
@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.proyectozesari.Model.Historias;
+import com.example.proyectozesari.R;
 
 
 /**

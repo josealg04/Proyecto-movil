@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.Model;
 
 import java.io.Serializable;
 

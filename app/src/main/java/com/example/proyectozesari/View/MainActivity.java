@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -14,9 +14,13 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.proyectozesari.Model.Historias;
+import com.example.proyectozesari.Model.Sitios;
+import com.example.proyectozesari.R;
+import com.example.proyectozesari.Presenter.iFragmentsCommunicate;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements iFragmentsCommunicate{
+public class MainActivity extends AppCompatActivity implements iFragmentsCommunicate {
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;

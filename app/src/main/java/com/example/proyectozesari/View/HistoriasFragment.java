@@ -1,4 +1,4 @@
-package com.example.proyectozesari;
+package com.example.proyectozesari.View;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.example.proyectozesari.Model.Historias;
+import com.example.proyectozesari.R;
+import com.example.proyectozesari.Presenter.iFragmentsCommunicate;
 
 import java.util.ArrayList;
 
@@ -29,7 +33,7 @@ public class HistoriasFragment extends Fragment {
     HistoriaAdapter historiaAdapter;
     RecyclerView recyclerView;
     ArrayList<Historias> listaHistorias;
-    iFragmentsCommunicate iFragmentsCommunicate;
+    com.example.proyectozesari.Presenter.iFragmentsCommunicate iFragmentsCommunicate;
     Activity activity;
 
     @Override

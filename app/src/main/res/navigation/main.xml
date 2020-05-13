@@ -6,22 +6,22 @@
     app:startDestination="@id/blankFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.proyectozesari.HomeFragment"
+        android:name="com.example.proyectozesari.View.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/sitiosFragment"
-        android:name="com.example.proyectozesari.SitiosFragment"
+        android:name="com.example.proyectozesari.View.SitiosFragment"
         android:label="fragment_sitios"
         tools:layout="@layout/fragment_sitios" />
     <fragment
         android:id="@+id/historiasFragment"
-        android:name="com.example.proyectozesari.HistoriasFragment"
+        android:name="com.example.proyectozesari.View.HistoriasFragment"
         android:label="fragment_historias"
         tools:layout="@layout/fragment_historias" />
     <fragment
         android:id="@+id/blankFragment"
-        android:name="com.example.proyectozesari.BlankFragment"
+        android:name="com.example.proyectozesari.View.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" />
 </navigation>
