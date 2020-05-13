@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home"></item>
+
+        <item
+            android:title="Sitios"
+            android:icon="@drawable/sitios"
+            android:id="@+id/sitios">
+        </item>
+
+        <item
+            android:title="Historias"
+            android:icon="@drawable/historias"
+            android:id="@+id/historias">
+        </item>
+    </group>
+</menu>
