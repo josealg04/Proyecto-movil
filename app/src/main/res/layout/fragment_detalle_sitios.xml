@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="2dp"
+        android:scrollbars="vertical">
+
+        <TextView
+            android:id="@+id/sitioName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre Sitio"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="center">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/sitioImage"
+            android:layout_width="441dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:src="@drawable/image_historias">
+        </ImageView>
+        <TextView
+            android:id="@+id/sitioDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripcion Sitio"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/sitioMunicipioDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Municipio"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/sitioMunicipio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Municipio"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/sitioDireccionDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/sitioDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ubicación Sitio"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:gravity="center">
+        </TextView>
+    </LinearLayout>
+</ScrollView>

@@ -16,12 +16,14 @@ import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements iFragmentsCommunicate{
 
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
     NavigationView navigationView;
+    DetalleSitiosFragment detalleSitiosFragment;
+    DetalleHistoriasFragment detalleHistoriasFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +75,32 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame,fragment).commit();
+        drawerLayout.closeDrawer(GravityCompat.START);
+        fragmentTransaction.addToBackStack(null);
+    }
+
+    @Override
+    public void detalleSitio(Sitios sitios) {
+        detalleSitiosFragment = new DetalleSitiosFragment();
+        Bundle bundleEnvio = new Bundle();
+        bundleEnvio.putSerializable("objeto", sitios);
+        detalleSitiosFragment.setArguments(bundleEnvio);
+        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame,detalleSitiosFragment).commit();
+        drawerLayout.closeDrawer(GravityCompat.START);
+        fragmentTransaction.addToBackStack(null);
+    }
+
+    @Override
+    public void detalleHistoria(Historias historias) {
+        detalleHistoriasFragment = new DetalleHistoriasFragment();
+        Bundle bundleEnvio = new Bundle();
+        bundleEnvio.putSerializable("objeto", historias);
+        detalleHistoriasFragment.setArguments(bundleEnvio);
+        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame,detalleHistoriasFragment).commit();
         drawerLayout.closeDrawer(GravityCompat.START);
         fragmentTransaction.addToBackStack(null);
     }

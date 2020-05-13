@@ -1,7 +1,10 @@
 package com.example.proyectozesari;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +20,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SitiosFragment extends Fragment {
+public class SitiosFragment extends Fragment{
 
     public SitiosFragment() {
         // Required empty public constructor
@@ -26,6 +29,8 @@ public class SitiosFragment extends Fragment {
     SitioAdapter sitioAdapter;
     RecyclerView recyclerView;
     ArrayList<Sitios> listaSitios;
+    iFragmentsCommunicate iFragmentsCommunicate;
+    Activity activity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -76,7 +81,22 @@ public class SitiosFragment extends Fragment {
             public void onClick(View view) {
                 String name = listaSitios.get(recyclerView.getChildAdapterPosition(view)).getSitioName();
                 Toast.makeText(getContext(), "Option: "+name, Toast.LENGTH_SHORT).show();
+                iFragmentsCommunicate.detalleSitio(listaSitios.get(recyclerView.getChildAdapterPosition(view)));
             }
         });
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if(context instanceof Activity){
+            this.activity = (Activity) context;
+            iFragmentsCommunicate = (iFragmentsCommunicate) this.activity;
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
     }
 }

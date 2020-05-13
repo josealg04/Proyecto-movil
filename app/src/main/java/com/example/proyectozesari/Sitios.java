@@ -1,6 +1,8 @@
 package com.example.proyectozesari;
 
-public class Sitios {
+import java.io.Serializable;
+
+public class Sitios implements Serializable {
 
     private String sitioName;
     private String sitioMunicipio;

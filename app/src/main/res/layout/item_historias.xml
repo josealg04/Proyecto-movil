@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/historiaImage"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:src="@drawable/image_historias">
+        </ImageView>
+        <TextView
+            android:id="@+id/historiaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la historia"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/historiaImage"
+            android:layout_toEndOf="@id/historiaImage"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/historiaMunicipio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Municipio historia"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_below="@id/historiaName"
+            android:layout_toEndOf="@id/historiaImage"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/historiaImage">
+        </TextView>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
