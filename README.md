@@ -42,10 +42,12 @@ Autores
 --------
 Las personas encargadas del desarrollo de esta aplicación son: 
 Reynaldo Jose Leyba Escorcia y Jose Ángel López Gómez
+
 Para comunicación directa con ellos, comunicarse a: 
-Facebook: Jose Ángel López, Reynaldo Leiva 
-Twitter: josealg04 
-Instagram: reiinaldo_L
+
+- Facebook: Jose Ángel López, Reynaldo Leiva 
+- Twitter: josealg04 
+- Instagram: reiinaldo_L
 
 Licencia
 ---------
