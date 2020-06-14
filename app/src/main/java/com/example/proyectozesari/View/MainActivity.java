@@ -66,6 +66,14 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
                         fragment=new HistoriasFragment();
                         loadFragment(fragment);
                         break;
+                    case R.id.calendario:
+                        fragment=new CalendarioFragment();
+                        loadFragment(fragment);
+                        break;
+                    case R.id.actividades:
+                        //fragment=new HistoriasFragment();
+                        //loadFragment(fragment);
+                        break;
                     default:
                         return true;
                 }

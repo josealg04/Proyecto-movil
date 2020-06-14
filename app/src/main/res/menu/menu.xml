@@ -7,7 +7,7 @@
             android:title="Home"></item>
 
         <item
-            android:title="Sitios"
+            android:title="Sitios de interés"
             android:icon="@drawable/sitios"
             android:id="@+id/sitios">
         </item>
@@ -16,6 +16,18 @@
             android:title="Historias"
             android:icon="@drawable/historias"
             android:id="@+id/historias">
+        </item>
+
+        <item
+            android:title="Calendario de eventos"
+            android:icon="@drawable/calendario"
+            android:id="@+id/calendario">
+        </item>
+
+        <item
+            android:title="Actividades"
+            android:icon="@drawable/actividades"
+            android:id="@+id/actividades">
         </item>
     </group>
 </menu>
