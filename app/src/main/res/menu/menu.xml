@@ -13,7 +13,7 @@
         </item>
 
         <item
-            android:title="Historias"
+            android:title="Cultura"
             android:icon="@drawable/historias"
             android:id="@+id/historias">
         </item>

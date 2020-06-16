@@ -2,6 +2,8 @@ package com.example.proyectozesari.View;
 
 import android.app.Activity;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.proyectozesari.Helpers.DatabaseHelper;
+import com.example.proyectozesari.Helpers.SitioBD;
 import com.example.proyectozesari.Model.Sitios;
 import com.example.proyectozesari.R;
 import com.example.proyectozesari.Presenter.iFragmentsCommunicate;
@@ -33,14 +37,21 @@ public class SitiosFragment extends Fragment{
     SitioAdapter sitioAdapter;
     RecyclerView recyclerView;
     ArrayList<Sitios> listaSitios;
-    com.example.proyectozesari.Presenter.iFragmentsCommunicate iFragmentsCommunicate;
+    iFragmentsCommunicate iFragmentsCommunicate;
     Activity activity;
+    SQLiteDatabase db;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sitios, container, false);
+
+        /*Bundle datoRecibido = getArguments();
+        String datoCategoria = datoRecibido.getString("categoria");
+        String datoMunicipio = datoRecibido.getString("municipio");
+        Toast.makeText(getContext(), "Municipio recibido: "+datoMunicipio, Toast.LENGTH_SHORT).show();*/
+
         recyclerView = view.findViewById(R.id.recyclerView);
         listaSitios = new ArrayList<>();
         uploadList();
@@ -49,30 +60,27 @@ public class SitiosFragment extends Fragment{
     }
 
     public void uploadList(){
-        listaSitios.add(new Sitios(
-                "Parque de las Monedas",
-                "Patillal",
-                "Parque ubicado en Patillal, corregimiento a media hora al norte de Valledupar, donde se rinde homenaje a destacados compositores vallenatos nacidos en este pueblo, entre los que se encuentra el maestro Rafael Escalona.",
-                "Patillal, Valledupar, Cesar",
-                R.drawable.parque_monedas));
-        listaSitios.add(new Sitios(
-                "Balneario La Vega",
-                "Patillal",
-                "A 20 minutos de Valledupar en dirección a Patillal, tierra de compositores como el maestro Rafael Escalona. Es uno de los cauces por donde pasa el famosos río Badillo, del cual se han escrito canciones vallenatas.",
-                "Patillal, Valledupar, Cesar",
-                R.drawable.balneario_vega));
-        listaSitios.add(new Sitios(
-                "Finca Ecoturística la Danta",
-                "Manaure",
-                "La Danta, una especie de eco-parque multiservicios enclavado en las estribaciones de la vertiente occidental de la Serranía del Perijá, más específicamente en el municipio de Manaure",
-                "Río, Manaure, Cesar",
-                R.drawable.finca_danta));
-        listaSitios.add(new Sitios(
-                "Mi Pedazo de Acordeón",
-                "Valledupar",
-                "El Monumento Mi Pedazo de Acordeón rinde homenaje a Alejo Durán, primer Rey Vallenato y al principal instrumento e la música vallenata.",
-                "Cra. 9 #3-2, Valledupar, Cesar",
-                R.drawable.pedazo_acordeon));
+        Bundle datoRecibido = getArguments();
+        String datoCategoria = datoRecibido.getString("categoria");
+        String datoMunicipio = datoRecibido.getString("municipio");
+        Toast.makeText(getContext(), "Municipio recibido: "+datoMunicipio, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Categoria recibido: "+datoCategoria, Toast.LENGTH_SHORT).show();
+        String[] datos = new String[] {datoMunicipio,datoCategoria};
+        DatabaseHelper dbHelper = new DatabaseHelper(getContext());
+        db = dbHelper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(" SELECT * FROM sitios WHERE municipio=? AND tipo=? ", datos);
+        while(cursor.moveToNext()) {
+            Sitios sitio = new Sitios();
+            sitio.setSitioId(cursor.getInt(0));
+            sitio.setSitioName(cursor.getString(1));
+            sitio.setSitioDescripcion(cursor.getString(2));
+            sitio.setSitioMunicipio(cursor.getString(3));
+            sitio.setSitioDireccion(cursor.getString(4));
+            sitio.setSitioTipo(cursor.getString(5));
+            sitio.setSitioImageId(cursor.getInt(6));
+            listaSitios.add(sitio);
+        }
+        cursor.close();
     }
 
     public void displayInfo(){
