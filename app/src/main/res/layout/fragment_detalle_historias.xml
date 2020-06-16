@@ -1,68 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:background="#ffffff">
-
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="2dp"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical">
 
-        <TextView
-            android:id="@+id/historiaName"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nombre Historia"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:textColor="#000000"
-            android:gravity="center">
-        </TextView>
+            android:layout_height="235dp">
 
-        <ImageView
-            android:id="@+id/historiaImage"
-            android:layout_width="441dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:paddingTop="10dp"
-            android:src="@drawable/image_historias">
-        </ImageView>
+            <ImageView
+                android:id="@+id/historiaImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/restaurantelabrasa"
+                card_view:ignore="MissingConstraints">
+            </ImageView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/historiaImage"
+                app:layout_constraintTop_toBottomOf="@+id/historiaImage">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/historiaName"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center"
+                        android:text="Nombre historia"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/historiaDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
             android:text="Descripcion Historia"
-            android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="18sp"
-            android:gravity="center">
+            android:gravity="fill_horizontal">
         </TextView>
-        <TextView
-            android:id="@+id/historiaMunicipioDetalle"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Municipio"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:gravity="center">
-        </TextView>
-        <TextView
-            android:id="@+id/historiaMunicipio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Municipio"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textAlignment="center"
-            android:gravity="center">
-        </TextView>
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#878787">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/pinmunicipio"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:foregroundGravity=""/>
+
+                <TextView
+                    android:id="@+id/historiaMunicipio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Municipio"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="fill_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/pin"
+                    android:layout_toEndOf="@id/pin">
+                </TextView>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#878787">
+            </View>
+
+        </LinearLayout>
     </LinearLayout>
 
 </ScrollView>

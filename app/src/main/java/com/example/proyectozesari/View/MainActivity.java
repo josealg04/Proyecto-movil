@@ -148,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Aguachica");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 40 Vía al Mar Entre Calle 3 y 4");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
-        values.put(SitioBD.SITIO_IMAGE,R.drawable.parque_monedas);
+        values.put(SitioBD.SITIO_IMAGE,R.drawable.restaurantelabrasa);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
         values.put(SitioBD.SITIO_ID,1);
