@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.proyectozesari.Helpers.DatabaseHelper;
+import com.example.proyectozesari.Helpers.HistoriaBD;
 import com.example.proyectozesari.Helpers.MunicipioBD;
 import com.example.proyectozesari.Helpers.SitioBD;
 import com.example.proyectozesari.Model.Historias;
@@ -50,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         guardarSitioRestaurantes();
         guardarMunicipios();
         guardarSitioHoteles();
+        guardarCulturaHistorias();
+        guardarCulturaJuglares();
+        guardarCulturaMusica();
 
         drawerLayout=findViewById(R.id.drawer);
         toolbar=findViewById(R.id.toolBar);
@@ -178,6 +182,39 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.balneario_vega);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
+    }
+
+    public void guardarCulturaHistorias(){
+        SQLiteDatabase db = database.getWritableDatabase();
+        long idHistoria;
+        ContentValues values =  new ContentValues();
+        values.put(HistoriaBD.HISTORIA_ID,0);
+        values.put(HistoriaBD.HISTORIA_NAME,"Leyenda de la Sirena de Hurtado");
+        values.put(HistoriaBD.HISTORIA_DESCRIPCION,"Cuentan una vez que en Semana Santa una niña muy linda pidió permiso a su mamá para irse a bañar a las profundas y frías aguas del Río Guatapuri, pozo de Hurtado; la madre de la niña, por ser Jueves Santo, le negó el permiso, pero la niña desobediente se marchó a escondidas, llegó a las rocas de la orilla, se quitó sus ropas y se lanzó al agua desde la altura; inmediatamente quedó convertida en Sirena. Su madre la llamó por toda la orilla del rió creyéndola ahogada, pero ella en la mañana, al salir el sol dijo adiós con la cola antes de sonreír por última vez, entonces, todos comprendieron la realidad.\n" +
+                "\n" +
+                "Cuentan los abuelos que antes la sirena salía a las rocas los jueves santo y emitía su hermosos canto que se escuchaba por todo el valle, al tiempo que brindaba a su madre las lagrimas de la desobediencia.");
+        values.put(HistoriaBD.HISTORIA_MUNICIPIO,"Valledupar");
+        values.put(HistoriaBD.HISTORIA_TIPO,"Historias");
+        values.put(HistoriaBD.HISTORIA_IMAGE,R.drawable.sirena);
+        idHistoria = db.insert(HistoriaBD.TABLE_HISTORIAS, null, values);
+
+        values.put(HistoriaBD.HISTORIA_ID,1);
+        values.put(HistoriaBD.HISTORIA_NAME,"Leyenda de Francisco El Hombre");
+        values.put(HistoriaBD.HISTORIA_DESCRIPCION,"Narra la leyenda que una noche después de una parranda de varios días y al ir en marcha hacia su pueblo, para distraerse en la soledad de la noche, abrió el acordeón y, sobre su burro, como era usual en aquella época, empezó a interpretar sus melodías; de pronto al terminar una pieza surgió de inmediato el repertorio de otro acordeonero que desafiante trataba de superarlo; de inmediato Francisco marchó hacia él hasta tenerlo a la vista; su competidor para sorpresa, era Satanás, quien al instante se sentó sobre la raíces de un gran árbol, abrió su acordeón, y con las notas que le brotaban hizo apagar la luna y toda las estrellas.\n" +
+                "\n" +
+                "El mundo se sumergió en una oscuridad tal, que sólo los ojos de Satanás resplandecían como tizones. Sus notas eran las de un gran maestro; algunos dicen que de ahí nació, de la inspiración del demonio, el canto del amor amor. Francisco, dueño de su virtudes y poseído de gran fe, lejos de acobardarse con la abrazadora oscuridad, abrió su acordeón y extrajo tan hermosa melodía que su magia devolvió la luz a la luna y a las estrellas, infligiendo temor al demonio. Después clamo a Dios y entonó el credo con su voz de cantador taumaturgo, el demonio exaltó un terrible alarido y con su acordeón a rastras irrumpió un gran bullicio hacia las montañas donde se perdió para siempre.");
+        values.put(HistoriaBD.HISTORIA_MUNICIPIO,"Aguachica");
+        values.put(HistoriaBD.HISTORIA_TIPO,"Historias");
+        values.put(HistoriaBD.HISTORIA_IMAGE,R.drawable.franciscoelhombre);
+        idHistoria = db.insert(HistoriaBD.TABLE_HISTORIAS, null, values);
+    }
+
+    public void guardarCulturaJuglares(){
+
+    }
+
+    public void guardarCulturaMusica(){
+
     }
 
     public void guardarMunicipios(){

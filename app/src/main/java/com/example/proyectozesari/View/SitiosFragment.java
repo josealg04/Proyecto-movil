@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyectozesari.Helpers.DatabaseHelper;
@@ -36,6 +37,7 @@ public class SitiosFragment extends Fragment{
 
     SitioAdapter sitioAdapter;
     RecyclerView recyclerView;
+    TextView textView;
     ArrayList<Sitios> listaSitios;
     iFragmentsCommunicate iFragmentsCommunicate;
     Activity activity;
@@ -46,13 +48,8 @@ public class SitiosFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sitios, container, false);
-
-        /*Bundle datoRecibido = getArguments();
-        String datoCategoria = datoRecibido.getString("categoria");
-        String datoMunicipio = datoRecibido.getString("municipio");
-        Toast.makeText(getContext(), "Municipio recibido: "+datoMunicipio, Toast.LENGTH_SHORT).show();*/
-
         recyclerView = view.findViewById(R.id.recyclerView);
+        textView = view.findViewById(R.id.emptyrecycler);
         listaSitios = new ArrayList<>();
         uploadList();
         displayInfo();
@@ -86,6 +83,7 @@ public class SitiosFragment extends Fragment{
     public void displayInfo(){
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         sitioAdapter = new SitioAdapter(getContext(), listaSitios);
+        if(!listaSitios.isEmpty()) {
         recyclerView.setAdapter(sitioAdapter);
         sitioAdapter.setOnClickListener(new View.OnClickListener(){
 
@@ -96,6 +94,10 @@ public class SitiosFragment extends Fragment{
                 iFragmentsCommunicate.detalleSitio(listaSitios.get(recyclerView.getChildAdapterPosition(view)));
             }
         });
+        }else{
+            recyclerView.setVisibility(View.GONE);
+            textView.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override

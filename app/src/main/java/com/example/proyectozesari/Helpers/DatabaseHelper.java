@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.proyectozesari.Model.Historias;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
@@ -19,6 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SitioBD.CREATE_TABLE_SITIO);
         db.execSQL(MunicipioBD.CREATE_TABLE_MUNICIPIOS);
+        db.execSQL(HistoriaBD.CREATE_TABLE_HISTORIA);
     }
 
     @Override
