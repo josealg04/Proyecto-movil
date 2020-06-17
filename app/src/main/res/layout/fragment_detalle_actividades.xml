@@ -19,7 +19,7 @@
             android:layout_height="235dp">
 
             <ImageView
-                android:id="@+id/sitioImage"
+                android:id="@+id/actividadImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
@@ -35,8 +35,8 @@
                 android:layout_marginRight="15dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="10dp"
-                app:layout_constraintBottom_toBottomOf="@+id/sitioImage"
-                app:layout_constraintTop_toBottomOf="@+id/sitioImage">
+                app:layout_constraintBottom_toBottomOf="@+id/actividadImage"
+                app:layout_constraintTop_toBottomOf="@+id/actividadImage">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -46,15 +46,15 @@
                     android:padding="8dp">
 
                     <TextView
-                        android:id="@+id/sitioName"
+                        android:id="@+id/actividadName"
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
                         android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
                         android:gravity="center"
-                        android:text="Nombre sitio"
+                        android:text="Nombre actividad"
                         android:textColor="#000000"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -65,13 +65,13 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/sitioDescripcion"
+            android:id="@+id/actividadDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="20dp"
-            android:text="Descripcion Sitio"
+            android:text="Descripcion actividad"
             android:textColor="#000000"
             android:textSize="18sp"
             android:gravity="fill_horizontal">
@@ -90,32 +90,32 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/pin"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/pinmunicipio"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="15dp"
-                android:foregroundGravity=""/>
+                <ImageView
+                    android:id="@+id/pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/pinmunicipio"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:foregroundGravity=""/>
 
-            <TextView
-                android:id="@+id/sitioMunicipio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                android:text="Municipio"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:gravity="fill_horizontal"
-                android:layout_gravity="center"
-                android:layout_toRightOf="@id/pin"
-                android:layout_toEndOf="@id/pin">
-            </TextView>
+                <TextView
+                    android:id="@+id/actividadMunicipio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Municipio"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="fill_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/pin"
+                    android:layout_toEndOf="@id/pin">
+                </TextView>
 
             </RelativeLayout>
 
@@ -147,7 +147,7 @@
                     android:foregroundGravity=""/>
 
                 <TextView
-                    android:id="@+id/sitioDireccion"
+                    android:id="@+id/actividadDireccion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"

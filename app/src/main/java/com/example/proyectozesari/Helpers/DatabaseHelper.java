@@ -22,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SitioBD.CREATE_TABLE_SITIO);
         db.execSQL(MunicipioBD.CREATE_TABLE_MUNICIPIOS);
         db.execSQL(HistoriaBD.CREATE_TABLE_HISTORIA);
+        db.execSQL(ActividadBD.CREATE_TABLE_ACTIVIDAD);
     }
 
     @Override

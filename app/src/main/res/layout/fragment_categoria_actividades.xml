@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ffffff"
-    tools:context=".View.CategoriaSitiosFragment">
+    tools:context=".View.CategoriaActividadesFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Categoría de sitios"
+            android:text="Categoría de actividades"
             android:textSize="24sp"
             android:gravity="center"
             android:textColor="#000000"
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elige el tipo de sitio"
+            android:text="Elige el tipo de actividad"
             android:textSize="14sp"
             android:gravity="center"
             android:textColor="#000000"
@@ -42,7 +42,7 @@
             android:rowCount="4">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnrestaurantes"
+                android:id="@+id/btnaves"
                 android:layout_width="170dp"
                 android:layout_height="130dp"
                 android:layout_margin="10dp"
@@ -60,12 +60,12 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/restaurantes"/>
+                        android:src="@drawable/avistamientodeaves"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Restaurantes"
+                        android:text="Avistamiento de aves"
                         android:gravity="center"
                         android:textColor="#000000"
                         android:textSize="14sp"
@@ -76,7 +76,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/btnhoteles"
+                android:id="@+id/btnrio"
                 android:layout_width="170dp"
                 android:layout_height="130dp"
                 android:layout_margin="10dp"
@@ -94,80 +94,80 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/hotel"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Hoteles"
-                        android:textColor="#000000"
-                        android:gravity="center"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btnbares"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="#ffffff"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/bar"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Bares"
-                        android:textColor="#000000"
-                        android:gravity="center"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/btnmonumentos"
-                android:layout_width="170dp"
-                android:layout_height="130dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="#ffffff"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/monumentos"/>
+                        android:src="@drawable/rio"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Monumentos"
+                        android:text="Bañarse en el río"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btncaminata"
+                android:layout_width="170dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/caminata"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Caminatas"
+                        android:textColor="#000000"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btncanotaje"
+                android:layout_width="170dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/canotaje"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Canotaje"
                         android:textColor="#000000"
                         android:gravity="center"
                         android:textSize="14sp"

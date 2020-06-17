@@ -17,40 +17,35 @@ import com.example.proyectozesari.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CategoriaHistoriasFragment extends Fragment {
+public class CategoriaActividadesFragment extends Fragment {
 
-    public CategoriaHistoriasFragment() {
+    public CategoriaActividadesFragment() {
         // Required empty public constructor
     }
 
-    CardView cardViewHistorias;
-    CardView cardViewLeyendas;
-    CardView cardViewJuglares;
-    CardView cardViewMusica;
+    CardView cardViewAves;
+    CardView cardViewRio;
+    CardView cardViewCaminata;
+    CardView cardViewCanotaje;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_categoria_historias, container, false);
+        View view = inflater.inflate(R.layout.fragment_categoria_actividades, container, false);
 
-        cardViewHistorias = view.findViewById(R.id.btnhistorias);
-        cardViewLeyendas = view.findViewById(R.id.btnleyendas);
-        cardViewJuglares = view.findViewById(R.id.btnjuglares);
-        cardViewMusica = view.findViewById(R.id.btnmusica);
+        cardViewAves = view.findViewById(R.id.btnaves);
+        cardViewRio = view.findViewById(R.id.btnrio);
+        cardViewCaminata = view.findViewById(R.id.btncaminata);
+        cardViewCanotaje = view.findViewById(R.id.btncanotaje);
 
-        Bundle datoRecibido = getArguments();
-        final String dato = datoRecibido.getString("municipio");
-        Toast.makeText(getContext(), "Municipio recibido: "+dato, Toast.LENGTH_SHORT).show();
-
-        cardViewHistorias.setOnClickListener(new View.OnClickListener() {
+        cardViewAves.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("categoria", "Historias");
-                bundle.putString("municipio", dato);
-                Toast.makeText(getContext(), "Option: Historias", Toast.LENGTH_SHORT).show();
-                Fragment fragment = new HistoriasFragment();
+                bundle.putString("categoria", "Avistamiento de aves");
+                Toast.makeText(getContext(), "Option: Avistamiento de aves", Toast.LENGTH_SHORT).show();
+                Fragment fragment = new ActividadesFragment();
                 fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -59,14 +54,13 @@ public class CategoriaHistoriasFragment extends Fragment {
             }
         });
 
-        cardViewLeyendas.setOnClickListener(new View.OnClickListener() {
+        cardViewRio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("categoria", "Leyendas");
-                bundle.putString("municipio", dato);
-                Toast.makeText(getContext(), "Option: Leyendas", Toast.LENGTH_SHORT).show();
-                Fragment fragment = new HistoriasFragment();
+                bundle.putString("categoria", "Bañarse en el río");
+                Toast.makeText(getContext(), "Option: Bañarse en el río", Toast.LENGTH_SHORT).show();
+                Fragment fragment = new ActividadesFragment();
                 fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -75,14 +69,13 @@ public class CategoriaHistoriasFragment extends Fragment {
             }
         });
 
-        cardViewJuglares.setOnClickListener(new View.OnClickListener() {
+        cardViewCaminata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("categoria", "Juglares");
-                bundle.putString("municipio", dato);
-                Toast.makeText(getContext(), "Option: Juglares", Toast.LENGTH_SHORT).show();
-                Fragment fragment = new HistoriasFragment();
+                bundle.putString("categoria", "Caminatas");
+                Toast.makeText(getContext(), "Option: Caminatas", Toast.LENGTH_SHORT).show();
+                Fragment fragment = new ActividadesFragment();
                 fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -91,14 +84,13 @@ public class CategoriaHistoriasFragment extends Fragment {
             }
         });
 
-        cardViewMusica.setOnClickListener(new View.OnClickListener() {
+        cardViewCanotaje.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
-                bundle.putString("categoria", "Musica");
-                bundle.putString("municipio", dato);
-                Toast.makeText(getContext(), "Option: Musica", Toast.LENGTH_SHORT).show();
-                Fragment fragment = new HistoriasFragment();
+                bundle.putString("categoria", "Canotaje");
+                Toast.makeText(getContext(), "Option: Canotaje", Toast.LENGTH_SHORT).show();
+                Fragment fragment = new ActividadesFragment();
                 fragment.setArguments(bundle);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
