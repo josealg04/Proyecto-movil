@@ -3,6 +3,7 @@ package com.example.proyectozesari.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.widget.Toolbar;
@@ -10,9 +11,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.Manifest;
 import android.content.ContentValues;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
     DetalleHistoriasFragment detalleHistoriasFragment;
     DetalleActividadesFragment detalleActividadesFragment;
     DatabaseHelper database;
+    final private int REQUEST_CODE_ASK_PERMISSION=111;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         guardarCulturaJuglares();
         guardarCulturaMusica();
         guardarActividades();
+        solicitarpermisos();
 
         drawerLayout=findViewById(R.id.drawer);
         toolbar=findViewById(R.id.toolBar);
@@ -852,5 +858,15 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(MunicipioBD.MUNICIPIOS_ID,7);
         values.put(MunicipioBD.MUNICIPIOS_NAME,"Valledupar");
         idMunicipio = db.insert(MunicipioBD.TABLE_MUNICIPIOS, null, values);
+    }
+
+    private void solicitarpermisos(){
+        int permisoFineGPS = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION);
+        int permisoCoarseGPS = ActivityCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        if(permisoFineGPS!=PackageManager.PERMISSION_GRANTED || permisoCoarseGPS!=PackageManager.PERMISSION_GRANTED){
+            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.M){
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_CODE_ASK_PERMISSION);
+            }
+        }
     }
 }
