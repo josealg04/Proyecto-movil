@@ -8,6 +8,7 @@ public class SitioBD {
     public static String SITIO_MUNICIPIO = "municipio";
     public static String SITIO_DIRECCION = "direccion";
     public static String SITIO_TIPO = "tipo";
+    public static String SITIO_MAPS = "maps";
     public static String SITIO_IMAGE = "image";
 
     public static final String CREATE_TABLE_SITIO=
@@ -18,5 +19,6 @@ public class SitioBD {
                     SITIO_MUNICIPIO+" TEXT, "+
                     SITIO_DIRECCION+" TEXT, "+
                     SITIO_TIPO+" TEXT, "+
+                    SITIO_MAPS+" TEXT, "+
                     SITIO_IMAGE+" INTEGER)";
 }

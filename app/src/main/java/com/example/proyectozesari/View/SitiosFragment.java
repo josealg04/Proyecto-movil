@@ -74,7 +74,8 @@ public class SitiosFragment extends Fragment{
             sitio.setSitioMunicipio(cursor.getString(3));
             sitio.setSitioDireccion(cursor.getString(4));
             sitio.setSitioTipo(cursor.getString(5));
-            sitio.setSitioImageId(cursor.getInt(6));
+            sitio.setSitioMaps(cursor.getString(6));
+            sitio.setSitioImageId(cursor.getInt(7));
             listaSitios.add(sitio);
         }
         cursor.close();

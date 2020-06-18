@@ -168,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Aguachica");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 40 Vía al Mar Entre Calle 3 y 4");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+La+Brasa-Aguachica,+Cesar/@8.3117531,-73.597162,15z/data=!4m2!3m1!1s0x0:0x8ec3af8125d44c2d?sa=X&ved=2ahUKEwjh8ICQvorqAhXRmeAKHVt-A2AQ_BIwCnoECBUQCA");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.restaurantelabrasa);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -177,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Bosconia");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 13 #2");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+la+Fogata/@9.9737073,-73.8857913,15z/data=!4m2!3m1!1s0x0:0x5f923f7bafb6515c?sa=X&ved=2ahUKEwjqkcTfvorqAhUph-AKHSlCCbAQ_BIwCnoECBQQCA");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.lafogata);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -186,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Codazzi");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 12 A #15-90");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+BUFET+EL+RODEO/@10.0332353,-73.2375579,17z/data=!3m1!4b1!4m5!3m4!1s0x8e601b0eaa93a237:0x5c3a22bc4b76499d!8m2!3d10.03323!4d-73.2353692");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.elrodeo);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -195,6 +198,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"El Copey");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 6 Este #4B-54");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+El+Merendero/@10.1500776,-73.9552688,17z/data=!3m1!4b1!4m5!3m4!1s0x8e5f8969fb7e7cf9:0xcc1fb5c3bfe3906c!8m2!3d10.1500723!4d-73.9530801");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.elmerendero);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -204,6 +208,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"La Paz");
         values.put(SitioBD.SITIO_DIRECCION,"Transversal 4 #2-85, Robles");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+Majuvi/@10.3866881,-73.1790414,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8abdbea89ea1bf:0x61122bd738a6f6a3!8m2!3d10.3866828!4d-73.1768527");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.majuvi);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -213,6 +218,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Manaure");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 2 #6-15");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Brasa+Manaurera+Restaurante/@10.3902744,-73.0263546,15z/data=!4m5!3m4!1s0x0:0x91ff2bb9f32cd90d!8m2!3d10.3902744!4d-73.0263546");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.brasamanaurera);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -222,6 +228,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Pueblo Bello");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 9 #5-17");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+Mi+Pueblo+Bello/@10.4126036,-73.5933415,17z/data=!3m1!4b1!4m5!3m4!1s0x8ef54f83589c7c73:0x6e96fa1c248e4e6d!8m2!3d10.4125983!4d-73.5911528");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.mipueblobello);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -231,6 +238,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 19 #5-30");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Restaurante+Montacarga+del+Norte/@10.4869444,-73.2662606,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab8320e3f8ee1:0x70ae2b1c680f1662!8m2!3d10.4869391!4d-73.2640719");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.montacarga);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -240,6 +248,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 12 #6-56");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Varadero+Valledupar/@10.4819454,-73.2487814,15z/data=!4m5!3m4!1s0x0:0xd24c6882762d2c77!8m2!3d10.4819454!4d-73.2487814");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.varadero);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -249,6 +258,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 13 No. 6-46 Parque Novalito");
         values.put(SitioBD.SITIO_TIPO,"Restaurantes");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Rider's+restaurante+bistro/@10.4811781,-73.2503249,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab9b4ba1ebe93:0x9e89d52ef34d1629!8m2!3d10.4811728!4d-73.2481362");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.bistro);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
     }
@@ -263,6 +273,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Aguachica");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 3 #39-91");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hotel+Monterrey+Plus-Aguachica/@8.3123085,-73.5999998,17z/data=!3m1!4b1!4m8!3m7!1s0x8e5d85877ff69a29:0x6184d696d28bbc80!5m2!4m1!1i2!8m2!3d8.3123032!4d-73.5978111");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.monterrey);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -272,6 +283,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Bosconia");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 23 #19-56");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hotel+Jorlin/@9.9720732,-73.8905112,17z/data=!3m1!4b1!4m8!3m7!1s0x8e5f93755ddc96d7:0x185f89a50e5134eb!5m2!4m1!1i2!8m2!3d9.9720679!4d-73.8883225");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.jorlin);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -281,6 +293,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Codazzi");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 16 #11-03 Centro");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Casa+Grande+Hotel/@10.0308523,-73.2382754,17z/data=!3m1!4b1!4m5!3m4!1s0x8e601af3ed40e199:0x5a99c53d759e900c!8m2!3d10.030847!4d-73.2360867");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.casagrande);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -290,6 +303,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"El Copey");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 3 #8-38 Carretera Troncal");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hotel+El+Cachaco/@10.1491029,-73.9550537,17z/data=!3m1!4b1!4m5!3m4!1s0x8e5f894207cd3be9:0xa3c641f16edfa663!8m2!3d10.1490976!4d-73.952865");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.elcachaco);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -299,6 +313,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"La Paz");
         values.put(SitioBD.SITIO_DIRECCION,"Tranversal 4 #1-2A");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/HOTEL+PAZ+REAL/@10.3861977,-73.181573,17z/data=!4m5!3m4!1s0x8e8abc8202f2dcb3:0x6c29de2fd59256fa!8m2!3d10.3860752!4d-73.1815716");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.issa);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -308,6 +323,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Manaure");
         values.put(SitioBD.SITIO_DIRECCION,"Km 2 Manaure A Sabana Rubia");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/El+Tuc%C3%A1n+Casa+Campo/@10.3890115,-73.0097858,17z/data=!3m1!4b1!4m8!3m7!1s0x8e8a9718f8e364c9:0xee48754b679d8f9b!5m2!4m1!1i2!8m2!3d10.3890062!4d-73.0075971");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.eltucan);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -317,6 +333,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Pueblo Bello");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 22 #4-14");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hotel+Campestre+Uraku/@10.4375944,-73.5789612,17z/data=!3m1!4b1!4m8!3m7!1s0x8ef54f51bb295db3:0x42aae164f3ee6209!5m2!4m1!1i2!8m2!3d10.4375891!4d-73.5767725");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.uraku);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -326,6 +343,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 16a #9-50");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hotel+Tativan/@10.4743148,-73.2494066,17z/data=!3m1!4b1!4m8!3m7!1s0x8e8ab9b6d400bdff:0x8e8845dec66aa1bd!5m2!4m1!1i2!8m2!3d10.4743095!4d-73.2472179");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.tativan);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -335,6 +353,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 30 #6A-133");
         values.put(SitioBD.SITIO_TIPO,"Hoteles");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Hampton+by+Hilton+Valledupar,+Colombia/@10.4541398,-73.2464941,16z/data=!4m15!1m6!3m5!1s0x8e8ab99773996773:0x450a10765cb7b1f2!2sHotel+Hampton+by+Hilton!8m2!3d10.446185!4d-73.237074!3m7!1s0x8e8ab82e2fe53121:0x7ec7731db7655e17!5m2!4m1!1i2!8m2!3d10.4564305!4d-73.2425451");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.hampton);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
     }
@@ -349,6 +368,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Aguachica");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 5 #29-52");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Juglares+bar/@8.3095624,-73.6084618,17z/data=!4m12!1m6!3m5!1s0x8e5d85e4eeafae25:0x50bdbcca2db81377!2sJuglares+bar!8m2!3d8.3095571!4d-73.6062731!3m4!1s0x8e5d85e4eeafae25:0x50bdbcca2db81377!8m2!3d8.3095571!4d-73.6062731");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.juglaresbar);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -358,6 +378,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Bosconia");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 17A #11-1");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Discoteca+Deja+V%C3%BA/@9.9730057,-73.8873539,17z/data=!3m1!4b1!4m5!3m4!1s0x8e5f9374cd3741a1:0xada30cc894f13c6e!8m2!3d9.9730004!4d-73.8851652");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.dejavu);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -367,6 +388,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Codazzi");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 16 #10A-18");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Sanjuanera+Bar/@10.0298876,-73.2384383,17z/data=!3m1!4b1!4m5!3m4!1s0x8e601b1328bab6ef:0x69b6f051bb32b51e!8m2!3d10.0298823!4d-73.2362496");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.sanjuanera);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -376,6 +398,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"El Copey");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 10 Kra 16-56, Centro");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/La+plaza+licores/@10.1492119,-73.9642914,17z/data=!3m1!4b1!4m5!3m4!1s0x8e5f893fcc230d63:0x3715ff8a9cac4588!8m2!3d10.1492066!4d-73.9621027");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.plazalicores);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -385,6 +408,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"La Paz");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 4 Norte #6-2, Robles");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Estadero+La+Machaca/@10.3882829,-73.1753411,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8abc8655040137:0x2e1e2da484691444!8m2!3d10.3882776!4d-73.1731524");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.lamachaca);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -394,6 +418,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Manaure");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 8 #2-30");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Estanco+y+comida+El+viejo+sola/@10.3891125,-73.0293189,15z/data=!4m5!3m4!1s0x0:0x87aa005c4f8cdee6!8m2!3d10.3891125!4d-73.0293189");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.viejosola);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -403,6 +428,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Pueblo Bello");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 4 #8-29");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/LA+OFICINA+ESTACO+HELADERIA/@10.4125229,-73.5931914,15z/data=!4m5!3m4!1s0x0:0x6290ffb62d3c0a55!8m2!3d10.4125229!4d-73.5931914");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.oficina);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -412,6 +438,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 19 #10-29");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/La+Bodeguita/@10.476552,-73.2616998,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab9c46b607a79:0xc2beaad61cd4a6ea!8m2!3d10.4765467!4d-73.2595111");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.labodeguita);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -421,6 +448,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 9 # 10-88");
         values.put(SitioBD.SITIO_TIPO,"Bares");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/La+Premiere/@10.4809428,-73.2538753,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab9b540fc079f:0x56c7d21ba31a557e!8m2!3d10.4809375!4d-73.2516866");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.lapremiere);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
     }
@@ -435,6 +463,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Aguachica");
         values.put(SitioBD.SITIO_DIRECCION,"Calle 5 #171");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Parque+Morrocoy/@8.3099184,-73.6188728,17z/data=!3m1!4b1!4m5!3m4!1s0x8e5d857ce9a4a421:0x6d1ba00b4cd42fd5!8m2!3d8.3099131!4d-73.6166841");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.morrocoy);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -444,6 +473,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Bosconia");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 6 #20-79");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Parque+Enrique+Aaron/@9.9765877,-73.892443,15z/data=!4m5!3m4!1s0x0:0x1963541414a561cf!8m2!3d9.9765877!4d-73.892443");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.fundadorbosconia);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -453,6 +483,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Codazzi");
         values.put(SitioBD.SITIO_DIRECCION,"Carrera 16 Entre Calle 10-11");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Parque+De+La+Guitarra/@10.0298959,-73.2392393,17z/data=!3m1!4b1!4m5!3m4!1s0x8e601af3a3f2a1bf:0xcdd83744f9e8d38!8m2!3d10.0298906!4d-73.2370506");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.guitarras);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -462,6 +493,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"La Paz");
         values.put(SitioBD.SITIO_DIRECCION,"Transversal 4 Calle 6");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Robles,+La+Paz,+Cesar/@10.3867984,-73.1709312,3a,75y,127.11h,90t/data=!3m6!1e1!3m4!1s8RZp9ivqRh1mmyHSiJnLiw!2e0!7i13312!8i6656!4m5!3m4!1s0x8e8abc8637abe8c9:0x8a85ae2f95f39825!8m2!3d10.3868315!4d-73.1706425?hl=es");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.almojabanera);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -471,6 +503,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Glorieta vía al Río Hurtado");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Glorieta+La+Pilonera+Mayor/@10.4968096,-73.2711714,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab8244a5398b7:0x956a2d574804cf64!8m2!3d10.4968043!4d-73.2689827");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.lapilonera);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
 
@@ -480,6 +513,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         values.put(SitioBD.SITIO_MUNICIPIO,"Valledupar");
         values.put(SitioBD.SITIO_DIRECCION,"Glorieta al lado del Parque La Provincia");
         values.put(SitioBD.SITIO_TIPO,"Monumentos");
+        values.put(SitioBD.SITIO_MAPS,"https://www.google.com/maps/place/Monumento+Martin+Elias/@10.5004748,-73.2700511,17z/data=!3m1!4b1!4m5!3m4!1s0x8e8ab914c8081509:0x11167a8b98bd36e5!8m2!3d10.5004695!4d-73.2678624");
         values.put(SitioBD.SITIO_IMAGE,R.drawable.martinelias);
         idSitio = db.insert(SitioBD.TABLE_SITIOS, null, values);
     }

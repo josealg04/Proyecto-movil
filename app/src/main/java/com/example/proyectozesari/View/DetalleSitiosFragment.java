@@ -1,5 +1,7 @@
 package com.example.proyectozesari.View;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -8,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,6 +28,8 @@ public class DetalleSitiosFragment extends Fragment {
     TextView sitioMunicipio;
     TextView sitioDireccion;
     ImageView sitioImage;
+    Button btnmaps;
+    String linkmaps;
 
     public DetalleSitiosFragment() {
         // Required empty public constructor
@@ -41,6 +46,7 @@ public class DetalleSitiosFragment extends Fragment {
         sitioDescripcion = view.findViewById(R.id.sitioDescripcion);
         sitioMunicipio = view.findViewById(R.id.sitioMunicipio);
         sitioDireccion = view.findViewById(R.id.sitioDireccion);
+        btnmaps = view.findViewById(R.id.btnmaps);
         Bundle sitioObject = getArguments();
         Sitios sitios = null;
         if(sitioObject!=null){
@@ -50,7 +56,17 @@ public class DetalleSitiosFragment extends Fragment {
             sitioDescripcion.setText(sitios.getSitioDescripcion());
             sitioMunicipio.setText(sitios.getSitioMunicipio());
             sitioDireccion.setText(sitios.getSitioDireccion());
+            linkmaps = sitios.getSitioMaps();
         }
+
+        btnmaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse(linkmaps);
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
