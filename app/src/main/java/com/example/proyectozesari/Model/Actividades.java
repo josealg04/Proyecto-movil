@@ -6,20 +6,18 @@ public class Actividades implements Serializable {
 
     private int actividadId;
     private String actividadName;
-    private String actividadMunicipio;
     private String actividadDescripcion;
-    private String actividadDireccion;
+    private String actividadContacto;
     private String actividadTipo;
     private int actividadImageId;
 
     public Actividades(){}
 
-    public Actividades(int actividadId, String actividadName, String actividadMunicipio, String actividadDescripcion, String actividadDireccion, String actividadTipo, int actividadImageId) {
+    public Actividades(int actividadId, String actividadName, String actividadDescripcion, String actividadContacto, String actividadTipo, int actividadImageId) {
         this.actividadId = actividadId;
         this.actividadName = actividadName;
-        this.actividadMunicipio = actividadMunicipio;
         this.actividadDescripcion = actividadDescripcion;
-        this.actividadDireccion = actividadDireccion;
+        this.actividadContacto = actividadContacto;
         this.actividadTipo = actividadTipo;
         this.actividadImageId = actividadImageId;
     }
@@ -40,14 +38,6 @@ public class Actividades implements Serializable {
         this.actividadName = actividadName;
     }
 
-    public String getActividadMunicipio() {
-        return actividadMunicipio;
-    }
-
-    public void setActividadMunicipio(String actividadMunicipio) {
-        this.actividadMunicipio = actividadMunicipio;
-    }
-
     public String getActividadDescripcion() {
         return actividadDescripcion;
     }
@@ -56,12 +46,12 @@ public class Actividades implements Serializable {
         this.actividadDescripcion = actividadDescripcion;
     }
 
-    public String getActividadDireccion() {
-        return actividadDireccion;
+    public String getActividadContacto() {
+        return actividadContacto;
     }
 
-    public void setActividadDireccion(String actividadDireccion) {
-        this.actividadDireccion = actividadDireccion;
+    public void setActividadContacto(String actividadContacto) {
+        this.actividadContacto = actividadContacto;
     }
 
     public String getActividadTipo() {

@@ -91,76 +91,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <ImageView
-                    android:id="@+id/pin"
+                    android:id="@+id/contacto"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                    android:src="@drawable/pinmunicipio"
+                    android:src="@drawable/contacto"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="15dp"
                     android:foregroundGravity=""/>
 
                 <TextView
-                    android:id="@+id/actividadMunicipio"
+                    android:id="@+id/actividadContacto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Municipio"
+                    android:text="Contacto"
                     android:textColor="#000000"
                     android:textSize="18sp"
                     android:gravity="fill_horizontal"
                     android:layout_gravity="center"
-                    android:layout_toRightOf="@id/pin"
-                    android:layout_toEndOf="@id/pin">
-                </TextView>
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:background="#878787">
-            </View>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="20dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:id="@+id/direccion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/direccion"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:foregroundGravity=""/>
-
-                <TextView
-                    android:id="@+id/actividadDireccion"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Direccion"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    android:gravity="fill_horizontal"
-                    android:layout_gravity="center"
-                    android:layout_toRightOf="@id/direccion"
-                    android:layout_toEndOf="@id/direccion">
+                    android:layout_toRightOf="@id/contacto"
+                    android:layout_toEndOf="@id/contacto">
                 </TextView>
 
             </RelativeLayout>

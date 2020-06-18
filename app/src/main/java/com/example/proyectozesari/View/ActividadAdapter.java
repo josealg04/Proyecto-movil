@@ -49,10 +49,10 @@ public class ActividadAdapter extends RecyclerView.Adapter<ActividadAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ActividadAdapter.ViewHolder holder, int position) {
         String name = lista.get(position).getActividadName();
-        String municipio = lista.get(position).getActividadMunicipio();
+        String contacto = lista.get(position).getActividadContacto();
         int image = lista.get(position).getActividadImageId();
         holder.actividadName.setText(name);
-        holder.actividadMunicipio.setText(municipio);
+        holder.actividadContacto.setText(contacto);
         holder.actividadImage.setImageResource(image);
     }
 
@@ -63,13 +63,13 @@ public class ActividadAdapter extends RecyclerView.Adapter<ActividadAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView actividadName, actividadMunicipio;
+        TextView actividadName, actividadContacto;
         ImageView actividadImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             actividadName = itemView.findViewById(R.id.actividadName);
-            actividadMunicipio = itemView.findViewById(R.id.actividadMunicipio);
+            actividadContacto = itemView.findViewById(R.id.actividadContacto);
             actividadImage = itemView.findViewById(R.id.actividadImage);
         }
     }

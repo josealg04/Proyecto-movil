@@ -15,6 +15,10 @@
         android:layout_height="wrap_content"
         app:mcv_showOtherDates="all"
         app:mcv_selectionColor="#283593"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
         />
     
     <androidx.cardview.widget.CardView

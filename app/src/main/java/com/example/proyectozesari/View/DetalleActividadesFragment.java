@@ -25,8 +25,7 @@ public class DetalleActividadesFragment extends Fragment {
 
     TextView actividadName;
     TextView actividadDescripcion;
-    TextView actividadMunicipio;
-    TextView actividadDireccion;
+    TextView actividadContacto;
     ImageView actividadImage;
 
     @Override
@@ -37,8 +36,7 @@ public class DetalleActividadesFragment extends Fragment {
         actividadName = view.findViewById(R.id.actividadName);
         actividadImage = view.findViewById(R.id.actividadImage);
         actividadDescripcion = view.findViewById(R.id.actividadDescripcion);
-        actividadMunicipio = view.findViewById(R.id.actividadMunicipio);
-        actividadDireccion = view.findViewById(R.id.actividadDireccion);
+        actividadContacto = view.findViewById(R.id.actividadContacto);
         Bundle actividadObject = getArguments();
         Actividades actividades = null;
         if(actividadObject!=null){
@@ -46,8 +44,7 @@ public class DetalleActividadesFragment extends Fragment {
             actividadName.setText(actividades.getActividadName());
             actividadImage.setImageResource(actividades.getActividadImageId());
             actividadDescripcion.setText(actividades.getActividadDescripcion());
-            actividadMunicipio.setText(actividades.getActividadMunicipio());
-            actividadDireccion.setText(actividades.getActividadDireccion());
+            actividadContacto.setText(actividades.getActividadContacto());
         }
         return view;
     }

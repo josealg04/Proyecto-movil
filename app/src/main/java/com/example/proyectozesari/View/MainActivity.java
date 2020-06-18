@@ -16,6 +16,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.proyectozesari.Helpers.ActividadBD;
 import com.example.proyectozesari.Helpers.DatabaseHelper;
 import com.example.proyectozesari.Helpers.HistoriaBD;
 import com.example.proyectozesari.Helpers.MunicipioBD;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
         guardarHistorias();
         guardarCulturaJuglares();
         guardarCulturaMusica();
+        guardarActividades();
 
         drawerLayout=findViewById(R.id.drawer);
         toolbar=findViewById(R.id.toolBar);
@@ -702,7 +704,83 @@ public class MainActivity extends AppCompatActivity implements iFragmentsCommuni
     }
 
     public void guardarCulturaMusica(){
+        SQLiteDatabase db = database.getWritableDatabase();
+        long idHistoria;
+        ContentValues values =  new ContentValues();
+        values.put(HistoriaBD.HISTORIA_ID,16);
+        values.put(HistoriaBD.HISTORIA_NAME,"Vallenato");
+        values.put(HistoriaBD.HISTORIA_DESCRIPCION,"Este género musical nace en Valledupar, donde yacían tribus indígenas, incluidas las Chimilas y Tupes, gobernadas por un poderoso jefe conocido como el Cacique Upar. Ahí es donde la ciudad recibe su nombre (Valle de Upar) y vallenato, a su vez, significa “nacido en el valle”.\n" +
+                "Se dice que los agricultores de la región heredaron las tradiciones de juglares españoles y africanos, cantando y tocando sus instrumentos mientras viajaban de ciudad en ciudad con sus vacas, compartiendo noticias y mensajes. Finalmente, los instrumentos africanos e indígenas, como las flautas de gaita, la guacharaca y los tambores, se unieron al acordeón europeo y así es como nace el vallenato.\n" +
+                "El Vallenato se toca al día de hoy con estos tres instrumentos musicales principales:\n" +
+                "-\tUn pequeño tambor (caja vallenata) sostenido entre las rodillas y tocado con las manos desnudas, una tradición traída a Colombia por esclavos africanos.\n" +
+                "-\tLa guacharaca, un instrumento indígena diseñado para imitar la llamada del ave guacharaca y utilizado inicialmente para rituales de caza y citas. Es acanalado y de madera, raspado con un tenedor de tres puntas.\n" +
+                "-\tEl acordeón, originario de Alemania.\n" +
+                "Por esta razón, el vallenato es tan especial, representa la unión de tres culturas (indígenas, europeas y africanas) en un género único que ha roto fronteras.\n");
+        values.put(HistoriaBD.HISTORIA_MUNICIPIO,"Valledupar");
+        values.put(HistoriaBD.HISTORIA_TIPO,"Musica");
+        values.put(HistoriaBD.HISTORIA_IMAGE,R.drawable.vallenato);
+        idHistoria = db.insert(HistoriaBD.TABLE_HISTORIAS, null, values);
 
+        values.put(HistoriaBD.HISTORIA_ID,17);
+        values.put(HistoriaBD.HISTORIA_NAME,"Porro");
+        values.put(HistoriaBD.HISTORIA_DESCRIPCION,"El porro es un ritmo musical de la Región Caribe colombiana, tradicional de los departamentos de Córdoba, Bolívar y Sucre. Posee un ritmo cadencioso, alegre y fiestero, propicio para el baile en parejas. Se ejecuta en compás de 2/2 o, como se le dice popularmente en América, compás partido. Es una música fiestera popular que generalmente es interpretada por bandas conocidas en Colombia como \"Pelayeras\", también conocidas como \"Bandas de Músicos\". Actualmente en Aguachica se celebra el Festival del Porro.");
+        values.put(HistoriaBD.HISTORIA_MUNICIPIO,"Aguachica");
+        values.put(HistoriaBD.HISTORIA_TIPO,"Musica");
+        values.put(HistoriaBD.HISTORIA_IMAGE,R.drawable.porro);
+        idHistoria = db.insert(HistoriaBD.TABLE_HISTORIAS, null, values);
+    }
+
+    public void guardarActividades(){
+        SQLiteDatabase db = database.getWritableDatabase();
+        long idActividad;
+        ContentValues values =  new ContentValues();
+        values.put(ActividadBD.ACTIVIDAD_ID,0);
+        values.put(ActividadBD.ACTIVIDAD_NAME,"Avistamiento de aves");
+        values.put(ActividadBD.ACTIVIDAD_DESCRIPCION,"En el Cesar puede encontrar alrededor de 500 especies de aves, con 4 focos de especial interés:\n" +
+                "  1.\tSerranía del Perijá.\n" +
+                "  2.\tSierra Nevada.\n" +
+                "  3.\tCiénaga de Zapatosa.\n" +
+                "  4.\tBosque seco del Valle del Cesar\n" +
+                "Lo puede hacer en el municipio de Manaure Balcón Turístico del Cesar, en el Eco Parque Los Besotes y en la Ciénaga de Zapatosa en Chimichagua.\n" +
+                "Lugares destacados para observación de aves en Manaure:\n" +
+                "  1.\tReserva Natural Los Tananeos.\n" +
+                "  2.\tCentro Turístico Villa Adelaida.\n" +
+                "  3.\tFinca Ecoturística La Danta.\n" +
+                "  4.\tFinca Cafetera Las Nieves (vereda San Antonio).\n" +
+                "  5.\tReserva Natural ProAves (vereda El Cinco).\n" +
+                "Disponibilidad permanente. Los horarios, días e itinerarios se establecen con base en la preferencia del cliente.");
+        values.put(ActividadBD.ACTIVIDAD_CONTACTO,"Guía José Luis Ropero - 317 626 8212");
+        values.put(ActividadBD.ACTIVIDAD_TIPO,"Avistamiento de aves");
+        values.put(ActividadBD.ACTIVIDAD_IMAGE,R.drawable.fotoaves);
+        idActividad = db.insert(ActividadBD.TABLE_ACTIVIDADES, null, values);
+
+        values.put(ActividadBD.ACTIVIDAD_ID,1);
+        values.put(ActividadBD.ACTIVIDAD_NAME,"Caminatas");
+        values.put(ActividadBD.ACTIVIDAD_DESCRIPCION,"Este plan es perfecto para todo aquel que disfrute ejercitar su cuerpo, disfrutando de la naturaleza y el clima fresco de la mañana. \n" +
+                "  - Mirador del Santo Ecce Homo: Si visitas Valledupar puedes realizar caminatas por el parque lineal del rio Guatapurí y conectar con los senderos del cerro del mirador del Santo Ecce Homo. \n" +
+                "  - Manaure: En este municipio encontraras el Cerro de la Cruz y los caminos hasta Sabana Rubia.  \n" +
+                "  - Recomedaciones: Ropa y calzado adecuados. Si realizas estas actividades en Valledupar ten en cuenta que el clima es cálido y seco, la hidratación es fundamental. En Manaure ten en cuenta que la mayoría de los senderos son en altura; en el caso de Sabana Rubia llegarás hasta los 3.000 m.s.n.m por lo que debes llevar ropa para clima frio.");
+        values.put(ActividadBD.ACTIVIDAD_CONTACTO,"No disponible");
+        values.put(ActividadBD.ACTIVIDAD_TIPO,"Caminatas");
+        values.put(ActividadBD.ACTIVIDAD_IMAGE,R.drawable.fotocaminatas);
+        idActividad = db.insert(ActividadBD.TABLE_ACTIVIDADES, null, values);
+
+        values.put(ActividadBD.ACTIVIDAD_ID,2);
+        values.put(ActividadBD.ACTIVIDAD_NAME,"Bañarse en el río");
+        values.put(ActividadBD.ACTIVIDAD_DESCRIPCION,"Colombia es uno de los países con mayor número de recursos hídricos en el mundo. En él se pueden encontrar seis tipos de aguas, incluyendo aguas lluvias, aguas superficiales, aguas subterráneas, aguas termo minerales, aguas marinas y oceánicas y aguas de alimentación glacial. El Cesar cuenta con una riqueza hídrica que puede aprovechar para darse un refrescante chapuzón. Disfrute de este plan junto a su familia y seguramente querrá volver.\n" +
+                "Puede disfrutar de este plan en el Río Guatapurí en Valledupar, en el Balneario del Río Badillo en Patillal y en el sector de La Mina.");
+        values.put(ActividadBD.ACTIVIDAD_CONTACTO,"No disponible");
+        values.put(ActividadBD.ACTIVIDAD_TIPO,"Bañarse en el río");
+        values.put(ActividadBD.ACTIVIDAD_IMAGE,R.drawable.fotorios);
+        idActividad = db.insert(ActividadBD.TABLE_ACTIVIDADES, null, values);
+
+        values.put(ActividadBD.ACTIVIDAD_ID,3);
+        values.put(ActividadBD.ACTIVIDAD_NAME,"Canotaje");
+        values.put(ActividadBD.ACTIVIDAD_DESCRIPCION,"El ecoturismo y turismo de aventura, tienen su espacio en un solo Departamento, el Cesar ofrece distintas oportunidades a los visitantes, debido a los diferentes climas, fuentes hídricas y riqueza cultural que caracteriza a esta región. El departamento del Cesar cuenta con una gran cantidad de ríos con las características requeridas para hacer canotaje. La Ciénaga de Zapatosa en Chimichagua, es el mejor sitio para disfrutar esta actividad. Además, en las riberas del río Magdalena y los ríos Guatapurí y Cesar.");
+        values.put(ActividadBD.ACTIVIDAD_CONTACTO,"No disponible");
+        values.put(ActividadBD.ACTIVIDAD_TIPO,"Canotaje");
+        values.put(ActividadBD.ACTIVIDAD_IMAGE,R.drawable.fotocanotaje);
+        idActividad = db.insert(ActividadBD.TABLE_ACTIVIDADES, null, values);
     }
 
     public void guardarMunicipios(){

@@ -69,10 +69,9 @@ public class ActividadesFragment extends Fragment {
             actividad.setActividadId(cursor.getInt(0));
             actividad.setActividadName(cursor.getString(1));
             actividad.setActividadDescripcion(cursor.getString(2));
-            actividad.setActividadMunicipio(cursor.getString(3));
-            actividad.setActividadDireccion(cursor.getString(4));
-            actividad.setActividadTipo(cursor.getString(5));
-            actividad.setActividadImageId(cursor.getInt(6));
+            actividad.setActividadContacto(cursor.getString(3));
+            actividad.setActividadTipo(cursor.getString(4));
+            actividad.setActividadImageId(cursor.getInt(5));
             listaActividades.add(actividad);
         }
         cursor.close();
