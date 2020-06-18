@@ -62,7 +62,52 @@ public class CalendarioFragment extends Fragment {
 
     public void fechaEventos(){
         HashSet<CalendarDay> dates = new HashSet<>();
-        dates.add(CalendarDay.from(2020,6-1,21));
+        //Paletilla
+        dates.add(CalendarDay.from(2020,1-1,30));
+        dates.add(CalendarDay.from(2020,1-1,31));
+        dates.add(CalendarDay.from(2020,2-1,1));
+        dates.add(CalendarDay.from(2020,2-1,2));
+
+        //San José
+        dates.add(CalendarDay.from(2020,3-1,18));
+
+        //Semana Santa
+        dates.add(CalendarDay.from(2020,4-1,5));
+        dates.add(CalendarDay.from(2020,4-1,6));
+        dates.add(CalendarDay.from(2020,4-1,7));
+        dates.add(CalendarDay.from(2020,4-1,8));
+        dates.add(CalendarDay.from(2020,4-1,9));
+        dates.add(CalendarDay.from(2020,4-1,10));
+        dates.add(CalendarDay.from(2020,4-1,11));
+
+        //Festival Vallenato
+        dates.add(CalendarDay.from(2020,4-1,25));
+        dates.add(CalendarDay.from(2020,4-1,26));
+        dates.add(CalendarDay.from(2020,4-1,27));
+        dates.add(CalendarDay.from(2020,4-1,28));
+        dates.add(CalendarDay.from(2020,4-1,29));
+        dates.add(CalendarDay.from(2020,4-1,30));
+        dates.add(CalendarDay.from(2020,5-1,1));
+        dates.add(CalendarDay.from(2020,5-1,2));
+
+        //Virgen del carmen
+        dates.add(CalendarDay.from(2020,7-1,16));
+
+        //Feria ganadera
+        dates.add(CalendarDay.from(2020,8-1,14));
+        dates.add(CalendarDay.from(2020,8-1,15));
+        dates.add(CalendarDay.from(2020,8-1,16));
+        dates.add(CalendarDay.from(2020,8-1,17));
+
+        //Halloween
+        dates.add(CalendarDay.from(2020,10-1,31));
+
+        //Noche buena y navidad
+        dates.add(CalendarDay.from(2020,12-1,24));
+        dates.add(CalendarDay.from(2020,12-1,25));
+
+        //Año viejo
+        dates.add(CalendarDay.from(2020,12-1,31));
         mcv.addDecorators(new EventDecorator(000000,dates));
     }
 
@@ -76,6 +121,9 @@ public class CalendarioFragment extends Fragment {
 
         mcv.setSelectedDate(CalendarDay.today());
 
+        mcv.setWeekDayLabels(new String[] {"DOM", "LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB"});
+        mcv.setTitleMonths(new String[] {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"});
+
         mcv.setOnDateChangedListener(new OnDateSelectedListener() {
             @Override
             public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
@@ -84,9 +132,39 @@ public class CalendarioFragment extends Fragment {
                 //Toast.makeText(getContext(), "" + date, Toast.LENGTH_SHORT).show();
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                 String dateSelected = format.format(date.getDate());
-                if(dateSelected.equals("2020-06-21")){
-                    fechaEvent.setText("Día del padre");
+                if(dateSelected.equals("2020-01-30") || dateSelected.equals("2020-01-31") || dateSelected.equals("2020-02-01") || dateSelected.equals("2020-02-02")) {
+                    fechaEvent.setText("Festival de la paletilla");
+                    municipio.setText("Becerril");
+                }else if(dateSelected.equals("2020-03-18")) {
+                    fechaEvent.setText("Fiesta Patronal de San José");
+                    municipio.setText("La Gloria");
+                }else if(dateSelected.equals("2020-04-05") || dateSelected.equals("2020-04-06") || dateSelected.equals("2020-04-07") || dateSelected.equals("2020-04-08") ||dateSelected.equals("2020-04-09") || dateSelected.equals("2020-04-10") || dateSelected.equals("2020-04-11")) {
+                    fechaEvent.setText("Semana Santa");
+                    municipio.setText("Departamento del Cesar");
+                }else if(dateSelected.equals("2020-04-25") || dateSelected.equals("2020-04-26") || dateSelected.equals("2020-04-27") || dateSelected.equals("2020-04-28") ||dateSelected.equals("2020-04-29") || dateSelected.equals("2020-04-30") || dateSelected.equals("2020-05-01") || dateSelected.equals("2020-05-02")) {
+                    fechaEvent.setText("Festival de la Leyenda Vallenata");
                     municipio.setText("Valledupar");
+                }else if(dateSelected.equals("2020-07-16")) {
+                    fechaEvent.setText("Fiesta Patronal de la Virgen del Carmen");
+                    municipio.setText("Departamento del Cesar");
+                }else if(dateSelected.equals("2020-08-14")) {
+                    fechaEvent.setText("Feria Ganadera");
+                    municipio.setText("Valledupar");
+                }else if(dateSelected.equals("2020-08-15") || dateSelected.equals("2020-08-16") || dateSelected.equals("2020-08-17")) {
+                    fechaEvent.setText("Feria Ganadera - Festival de La Quinta");
+                    municipio.setText("Valledupar");
+                }else if(dateSelected.equals("2020-10-31")) {
+                    fechaEvent.setText("Halloween");
+                    municipio.setText("Cesar");
+                }else if(dateSelected.equals("2020-12-24")) {
+                    fechaEvent.setText("Noche buena");
+                    municipio.setText("Cesar");
+                }else if(dateSelected.equals("2020-12-25")) {
+                    fechaEvent.setText("Navidad");
+                    municipio.setText("Cesar");
+                }else if(dateSelected.equals("2020-12-31")){
+                    fechaEvent.setText("Año viejo");
+                    municipio.setText("Cesar");
                 }else{
                     fechaEvent.setText("Sin eventos");
                     municipio.setText("");
